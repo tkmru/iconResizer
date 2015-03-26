@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='jp'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Icon Resizer</title>
+
+    <!-- Bootstrap -->
+    <link rel='stylesheet' hred='css/reset.css'>
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' href='css/iconResizer.css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
+      <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class='container'>
+      <h1>Icon Resizer</h1>
+      <hr>
+    </header>
+
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-7'>
+          <h2>Select Picture</h2>
+          <div id='droppable' ondragover='preventOpenTab(event);' ondrop='insertImage(event);'>
+            <p>drop here</p>
+          </div>
+        </div>
+
+        <div class='col-md-5'>
+          <ul id='size_checkboxes'>
+            <h2>Select size</h2>
+            <h3>Smart phone &amp; tablet</h3>
+            <li>
+              <label data-toggle='tooltip' title='57x57, 114x114,   120x120, 29x29, 58x58, 80x80, 512x512, 1024x1024'>
+                <input type='checkbox' class='size_checkbox' value='0'> iPhone
+              </label>
+            </li>
+
+            <li>
+              <label data-toggle='tooltip' title='72x72, 144x144, 76x76, 152x152, 40x40, 80x80, 50x50, 100x100, 512x512 1024x1024'>
+                <input type='checkbox' class='size_checkbox' value='1'> iPad 
+              </label>
+            </li>
+
+            <li>
+              <label data-toggle='tooltip' title='36x36, 48x48, 72x72, 96x96, 512x512'>
+                <input type='checkbox' class='size_checkbox' value='2'> Android 
+              </label>
+            </li>
+
+            <li>
+              <label data-toggle='tooltip' title='62x62, 173x173, 99x99, 200x200'>
+                <input type='checkbox' class='size_checkbox' value='3'> Windows Phone 
+              </label>
+            </li>
+
+            <li>
+              <label data-toggle='tooltip' title='60x60, 128x128, 32x32, 90x90, 120x120, 256x256'>
+                <input type='checkbox' class='size_checkbox' value='4'> Firefox Phone 
+              </label>
+            </li>
+
+            <h3>Others</h3>
+            <li>
+              <label data-toggle='tooltip' title='16x16, 24x24, 32x32'>
+                <input type='checkbox' class='size_checkbox' value='5'> Firefox Extention 
+              </label>
+            </li>
+
+            <li>
+              <label data-toggle='tooltip' title='32x32, 48x48, 128x128'>
+                <input type='checkbox' class='size_checkbox' value='6'> Chrome Extention 
+              </label>
+
+              <ul>
+                <li>
+                  <label data-toggle='tooltip' title='19x19, 38x38'>
+                    <input type='checkbox' class='chrome_extention_checkbox' value='0'> browzer Action 
+                  </label>
+                </li>
+
+                <li>
+                  <label data-toggle='tooltip' title='16x16'>
+                    <input type='checkbox' class='chrome_extention_checkbox' value='1'> context Menus 
+                  </label>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <label data-toggle='tooltip' title='96x96, 128x128'>
+                <input type='checkbox' class='size_checkbox' value='7'> Chrome Application 
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id='start'>
+      <input type='button' class='btn btn-warning' id='start' value='Start Resize'>
+    </div>
+
+    
+    <div id='resize_temp'></div>
+
+    <footer>&copy; @tkmru</footer>
+
+    <script src='js/jquery-1.11.2.min.js'></script>
+    <script src='js/jszip.min.js'></script>
+    <script src='js/FileSaver.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>  
+    <script src='js/iconResizer.js'></script>      
+  </body>
+</html>
