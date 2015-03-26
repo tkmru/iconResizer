@@ -72,8 +72,6 @@ function resizeImg(size, size_name, counter) {
 
 
 $('#start').click(function() {
-    var zip = new JSZip();
-
     var size_dict = {
         0: ['iPhone', [57, 114, 120, 29, 58, 80, 512, 1024]],
         1: ['iPad', [72, 144, 76, 152, 40, 80, 50, 100, 512, 1024]],
@@ -100,7 +98,7 @@ $('#start').click(function() {
 
     for (var i = 0; i < checked.length; i++) {
         var size_list = size_dict[checked[i]][1];
-        var size_name = size_dict[checked[i]][0]
+        var size_name = size_dict[checked[i]][0];
         var zip = new JSZip();
 
         if (checked[i] == 6) { // chrome extention
