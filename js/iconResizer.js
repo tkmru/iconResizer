@@ -12,19 +12,6 @@ function insertImage(event) {
         var img_base64 = reader.result;
         //console.log(img_base64);
         $('#droppable').html('<img id="dropped" src="' + img_base64 + '" width="380" height="380">');
-/*
-        $('#droppable').html('<canvas id="dropped" width="380" height="380"></canvas>');
-
-        var canvas = document.getElementById("dropped");
-        var ctx = canvas.getContext("2d");
-
-        var image = new Image();
-        image.src = img_base64;
-        image.onload = function() {
-            ctx.drawImage(image, 0, 0, 380, 380);
-        }
-        //console.log(canvas.toDataURL().indexOf(','));
-*/
     }
 }
 
@@ -58,12 +45,11 @@ $(function() {
 
 function resizeImg(size, size_name, counter) {
     var source = document.getElementById('dropped');
-    var canvas_ID = size_name + counter;
-    console.log(canvas_ID);
+    //console.log(canvas_ID);
 
-    $('#resize_temp').append('<canvas id="' + canvas_ID + '" width="' + size + '" height="' + size + '"></canvas>');
+    $('#resize_temp').append('<canvas class="' + size_name + '" width="' + size + '" height="' + size + '"></canvas>');
 
-    var canvas = document.getElementById(canvas_ID);
+    var canvas = document.getElementsByClassName(size_name)[counter];
     var ctx = canvas.getContext("2d");
     ctx.drawImage(source, 0, 0, size, size);
 
@@ -113,12 +99,12 @@ $('#start').click(function() {
             }
         }
 
-        var ID_counter = 0;
+        var index_counter = 0;
 
         for (var k = 0; k < size_list.length; k++) {
-            var canvas_base64 = resizeImg(size_list[k], size_name, ID_counter);
+            var canvas_base64 = resizeImg(size_list[k], size_name, index_counter);
             zip.file(size_list[k] + '.png', canvas_base64,  {base64: true});
-            ID_counter++;
+            index_counter++;
         }
 
         saveAs(zip.generate({ type: 'blob' }), size_name + '.zip');
