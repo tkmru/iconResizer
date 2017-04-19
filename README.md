@@ -1,21 +1,18 @@
-#iconresizer
+# iconresizer
 
 This resize icon on client side for smartphone application and browzer extention developers.
 
-##How to use
+## How to use
 access http://tkmru.github.io/iconresizer/
 
-##Included Library
-bootstrap (http://getbootstrap.com/)
-
-FileSaver.js (https://github.com/eligrey/FileSaver.js)
-
-jquery-1.11.2.min.js (http://jquery.com/download/)
-
-jszip (https://github.com/Stuk/jszip/)
+## Included Library
+- [bootstrap](http://getbootstrap.com/)
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js)
+- [jquery-1.11.2.min.js](http://jquery.com/download/)
+- [jszip](https://github.com/Stuk/jszip/)
 
 
-##License
+## License
 MIT License
 
 Copyright @tkmru
