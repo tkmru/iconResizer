@@ -59,14 +59,8 @@ function resizeImg(size, size_name, counter) {
 
 $('#start').click(function() {
     var size_dict = {
-        0: ['iPhone', [57, 114, 120, 29, 58, 80, 512, 1024]],
-        1: ['iPad', [72, 144, 76, 152, 40, 80, 50, 100, 512, 1024]],
-        2: ['Android', [36, 48, 72, 96, 512]],
-        3: ['Windows Phone', [62, 173, 99, 200]],
-        4: ['Firefox Phone', [60, 128, 32, 90, 120, 256]],
-        5: ['Firefox Extention', [16, 24, 32]],
-        6: ['Chrome Extention', [32, 48, 128]],
-        7: ['Chrome Application', [96, 128]]
+        0: ['for-Slack-Bot-Icon', [512]],
+        1: ['for-Chrome-Extention', [32, 48, 128]],
     }
 
     var checked = $('.size_checkbox:checked').map(function() {
