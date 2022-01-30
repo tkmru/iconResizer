@@ -8,7 +8,8 @@
 
     <!-- Bootstrap -->
     <link rel='stylesheet' hred='css/reset.css'>
-    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel='stylesheet' href='css/iconResizer.css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,44 +37,9 @@
         <div class='col-md-5'>
           <ul id='size_checkboxes'>
             <h2>Select size</h2>
-            <h3>Smartphone &amp; tablet</h3>
-            <li>
-              <label data-toggle='tooltip' title='57x57, 114x114,   120x120, 29x29, 58x58, 80x80, 512x512, 1024x1024'>
-                <input type='checkbox' class='size_checkbox' value='0'> iPhone
-              </label>
-            </li>
+            <h3>For Slack</h3>
 
-            <li>
-              <label data-toggle='tooltip' title='72x72, 144x144, 76x76, 152x152, 40x40, 80x80, 50x50, 100x100, 512x512 1024x1024'>
-                <input type='checkbox' class='size_checkbox' value='1'> iPad 
-              </label>
-            </li>
-
-            <li>
-              <label data-toggle='tooltip' title='36x36, 48x48, 72x72, 96x96, 512x512'>
-                <input type='checkbox' class='size_checkbox' value='2'> Android 
-              </label>
-            </li>
-
-            <li>
-              <label data-toggle='tooltip' title='62x62, 173x173, 99x99, 200x200'>
-                <input type='checkbox' class='size_checkbox' value='3'> Windows Phone 
-              </label>
-            </li>
-
-            <li>
-              <label data-toggle='tooltip' title='60x60, 128x128, 32x32, 90x90, 120x120, 256x256'>
-                <input type='checkbox' class='size_checkbox' value='4'> Firefox Phone 
-              </label>
-            </li>
-
-            <h3>Others</h3>
-            <li>
-              <label data-toggle='tooltip' title='16x16, 24x24, 32x32'>
-                <input type='checkbox' class='size_checkbox' value='5'> Firefox Extention 
-              </label>
-            </li>
-
+            <h3>For Chrome</h3>
             <li>
               <label data-toggle='tooltip' title='32x32, 48x48, 128x128'>
                 <input type='checkbox' class='size_checkbox' value='6'> Chrome Extention 
@@ -93,12 +59,6 @@
                 </li>
               </ul>
             </li>
-
-            <li>
-              <label data-toggle='tooltip' title='96x96, 128x128'>
-                <input type='checkbox' class='size_checkbox' value='7'> Chrome Application 
-              </label>
-            </li>
           </ul>
         </div>
       </div>
@@ -113,10 +73,14 @@
 
     <footer>&copy; @tkmru</footer>
 
-    <script src='js/jquery-1.11.2.min.js'></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
     <script src='js/jszip.min.js'></script>
     <script src='js/FileSaver.min.js'></script>
-    <script src='js/bootstrap.min.js'></script>  
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src='js/iconResizer.js'></script>      
   </body>
 </html>
