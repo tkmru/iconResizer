@@ -1,5 +1,4 @@
 # iconresizer
-
 This resize icon on client side for smartphone application and browzer extention developers.
 
 ## How to use
